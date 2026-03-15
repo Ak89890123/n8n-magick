@@ -1,12 +1,11 @@
-FROM n8nio/n8n:latest
+FROM docker.n8n.io/n8nio/n8n
 
 USER root
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apk add --no-cache \
     imagemagick \
-    fonts-noto-cjk \
-    librsvg2-bin \
- && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    font-noto-cjk \
+    librsvg
 
 USER node
 
