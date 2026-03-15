@@ -8,7 +8,3 @@ RUN apk add --no-cache \
     librsvg
 
 USER node
-
-EXPOSE 5678
-
-CMD ["n8n"]
